@@ -14,7 +14,7 @@ namespace ENTRETIEN_TECHNIQUE.Console
             _date = date;
         }
 
-        public void Withdraw(string accountNumber, decimal amount)
+        public void Withdrawl(string accountNumber, decimal amount)
         {
 
             AccountBalance? account = _accountBalanceDAO.GetById(accountNumber);

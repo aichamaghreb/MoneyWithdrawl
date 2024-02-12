@@ -15,7 +15,7 @@ namespace ENTRETIEN_TECHNIQUE.Console
                 var services = serviceScope.ServiceProvider;
                 var accountService = services.GetRequiredService<IAccountService>();
 
-                accountService.Withdraw("0000001", 150);
+                accountService.Withdrawl("0000001", 150);
             }
             System.Console.WriteLine("Appuyez sur une touche pour terminer l'exécution");
             System.Console.ReadKey();

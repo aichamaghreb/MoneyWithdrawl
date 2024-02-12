@@ -2,6 +2,6 @@
 {
     public interface IAccountService
     {
-        public void Withdraw(string accountNumber, decimal amount);
+        public void Withdrawl(string accountNumber, decimal amount);
     }
 }

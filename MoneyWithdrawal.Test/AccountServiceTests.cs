@@ -35,7 +35,7 @@ namespace MoneyWithdrawal.Test
                 .Callback<AccountBalance>(balance => savedBalance = balance);
 
             //ACT
-            _accountService.Withdraw(numAccount, amount);
+            _accountService.Withdrawl(numAccount, amount);
 
             //ASSERT
             _accountBalanceDAO.Verify(x => x.Save(It.IsAny<AccountBalance>()), Times.Once());
@@ -55,7 +55,7 @@ namespace MoneyWithdrawal.Test
         //    _accountBalanceDAO.Setup(x => x.GetById(numAccount)).Returns(account);
 
         //    //ACT
-        //    _accountService.Withdraw(numAccount, amount);
+        //    _accountService.Withdrawl(numAccount, amount);
 
         //    //ASSERT
         //    _accountBalanceDAO.Verify(x => x.Save(account), Times.Never());
@@ -74,7 +74,7 @@ namespace MoneyWithdrawal.Test
             _date.Setup(x => x.GetMonth()).Returns(monthValue);
 
             //ACT
-            _accountService.Withdraw(numAccount, amount);
+            _accountService.Withdrawl(numAccount, amount);
 
             //ASSERT
             _accountBalanceDAO.Verify(x => x.Save(account), Times.Never());
@@ -95,7 +95,7 @@ namespace MoneyWithdrawal.Test
             _date.Setup(x => x.GetMonth()).Returns(monthValue);
 
             //ACT
-            _accountService.Withdraw(numAccount, amount);
+            _accountService.Withdrawl(numAccount, amount);
 
             //ASSERT
             _accountBalanceDAO.Verify(x => x.Save(It.Is<AccountBalance>(b => b.Balance == expectedBalance)), Times.Once());
