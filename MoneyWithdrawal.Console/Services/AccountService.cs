@@ -1,10 +1,4 @@
 ﻿using MoneyWithdrawal.Console;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ENTRETIEN_TECHNIQUE.Console
 {
@@ -12,10 +6,12 @@ namespace ENTRETIEN_TECHNIQUE.Console
     {
         private readonly IAccountBalanceDAO _accountBalanceDAO;
         private readonly IConsole _console;
-        public AccountService(IAccountBalanceDAO accountBalanceDAO, IConsole console)
+        private readonly IDate _date;
+        public AccountService(IAccountBalanceDAO accountBalanceDAO, IConsole console, IDate date)
         {
             _accountBalanceDAO = accountBalanceDAO;
             _console = console;
+            _date = date;
         }
 
         public void Withdraw(string accountNumber, decimal amount)
@@ -25,9 +21,22 @@ namespace ENTRETIEN_TECHNIQUE.Console
 
             if (account != null)
             {
-                if (amount > account.Balance)
+                if (_date.GetMonth() == 12)
                 {
-                    _console.WriteText("Le montant de la demande dépasse le solde du compte");
+                    _console.WriteText("Aucun retrait n'est autorisé en Décembre");
+                    return;
+                }
+
+                //if (amount > account.Balance)
+                //{
+                //    _console.WriteText("Le montant de la demande dépasse le solde du compte");
+                //}
+                decimal limitAmount = -20;
+                decimal expectedBalance = account.Balance - amount;
+
+                if (expectedBalance < limitAmount)
+                {
+                    _console.WriteText("Le montant de la demande dépasse votre autorisation de découvert");
                 }
                 else
                 {

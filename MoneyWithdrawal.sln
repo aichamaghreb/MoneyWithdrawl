@@ -9,22 +9,32 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{1C6E8D84-64E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F7AF2E66-A097-471A-BEAA-AD931CE2643B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyWithdrawal.Test", "MoneyWithdrawal.Test\MoneyWithdrawal.Test.csproj", "{78132B15-A361-4255-9229-626B1EA585A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyWithdrawal.Test", "MoneyWithdrawal.Test\MoneyWithdrawal.Test.csproj", "{78132B15-A361-4255-9229-626B1EA585A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{976B3673-459D-4F79-909F-AE01846CA460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{976B3673-459D-4F79-909F-AE01846CA460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{976B3673-459D-4F79-909F-AE01846CA460}.Debug|x64.ActiveCfg = Debug|x64
+		{976B3673-459D-4F79-909F-AE01846CA460}.Debug|x64.Build.0 = Debug|x64
 		{976B3673-459D-4F79-909F-AE01846CA460}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{976B3673-459D-4F79-909F-AE01846CA460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{976B3673-459D-4F79-909F-AE01846CA460}.Release|x64.ActiveCfg = Release|x64
+		{976B3673-459D-4F79-909F-AE01846CA460}.Release|x64.Build.0 = Release|x64
 		{78132B15-A361-4255-9229-626B1EA585A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{78132B15-A361-4255-9229-626B1EA585A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78132B15-A361-4255-9229-626B1EA585A6}.Debug|x64.ActiveCfg = Debug|x64
+		{78132B15-A361-4255-9229-626B1EA585A6}.Debug|x64.Build.0 = Debug|x64
 		{78132B15-A361-4255-9229-626B1EA585A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78132B15-A361-4255-9229-626B1EA585A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78132B15-A361-4255-9229-626B1EA585A6}.Release|x64.ActiveCfg = Release|x64
+		{78132B15-A361-4255-9229-626B1EA585A6}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

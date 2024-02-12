@@ -26,6 +26,7 @@ namespace ENTRETIEN_TECHNIQUE.Console
            {
                services.AddSingleton<IAccountBalanceDAO, AccountBalanceDAO>()
                        .AddSingleton<IConsole, ConsoleWrapper>()
+                       .AddSingleton<IDate,DateWrapper>()
                        .AddSingleton<IAccountService, AccountService>();
            });
     }

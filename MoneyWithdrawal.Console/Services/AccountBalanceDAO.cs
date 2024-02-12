@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ENTRETIEN_TECHNIQUE.Console
+﻿namespace ENTRETIEN_TECHNIQUE.Console
 {
     public class AccountBalanceDAO : IAccountBalanceDAO
     {
@@ -14,7 +7,7 @@ namespace ENTRETIEN_TECHNIQUE.Console
                 new("0000002", 50),
                 new("0000003", 0)
             };
-        
+
         public AccountBalance? GetById(string accountNumber)
         {
             return AccountBalances.FirstOrDefault(e => e.AccountNumber.Equals(accountNumber));
